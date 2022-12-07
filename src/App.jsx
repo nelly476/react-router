@@ -4,17 +4,20 @@ import { Link, Routes, Route } from "react-router-dom";
 
 import About from "./About";
 import Home from "./Home";
+import Header from "./Header";
+import ServiceList from "./services/ServicesList";
+import ServiceDetail from "./services/ServiceDetail";
 
 function App() {
   return (
     <div>
-      <Link to="/">Home</Link>
-      <Link to="/about">About</Link>
+      <Header />
 
       <Routes>
-        <Route exact path="/" element={<Home />} />
+        <Route path="/" element={<Home />} />
 
-        <Route exact path="/about" element={<About />} />
+        <Route path="/services" element={<ServiceList />} />
+        <Route path="/services/:serviceId" element={<ServiceDetail />} />
       </Routes>
     </div>
   );
