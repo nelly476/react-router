@@ -8,9 +8,12 @@ function ServiceDetail() {
   const thisService = servicesData.find((item) => item._id === serviceId);
 
   return (
-    <h3>
-      {thisService.name} - ${thisService.price}
-    </h3>
+    <div>
+      <h3>
+        {thisService.name} - ${thisService.price}
+      </h3>
+      <p>{thisService.description}</p>
+    </div>
   );
 }
 
